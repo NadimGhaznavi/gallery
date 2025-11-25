@@ -12,8 +12,7 @@
             {% if site.author.links %}
             {% for link in site.author.links %}
             <li>
-                <i class="{{ link.icon }}"></i>
-                <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+                <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.icon}}</a>
             </li>
             {% endfor %}
             {% endif %}
