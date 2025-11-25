@@ -74,3 +74,11 @@
     text-transform: uppercase;
     /* optional, matches social links style */
 }
+
+.sidebar--gallery {
+    width: 500px;
+    /* adjust as needed */
+    max-width: 50%;
+    /* responsive */
+    padding: 1rem;
+}
