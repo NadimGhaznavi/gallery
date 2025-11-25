@@ -1,20 +1,24 @@
-{% if site.comments.provider and page.comments %}
-{% case site.comments.provider %}
-{% when "disqus" %}
-{% include /comments-providers/disqus.html %}
-{% when "discourse" %}
-{% include /comments-providers/discourse.html %}
-{% when "facebook" %}
-{% include /comments-providers/facebook.html %}
-{% when "staticman" %}
-{% include /comments-providers/staticman.html %}
-{% when "staticman_v2" %}
-{% include /comments-providers/staticman_v2.html %}
-{% when "utterances" %}
-{% include /comments-providers/utterances.html %}
-{% when "giscus" %}
-{% include /comments-providers/giscus.html %}
-{% when "custom" %}
-{% include /comments-providers/custom_scripts.html %}
-{% endcase %}
-{% endif %}
+<footer class="page__footer">
+    <div class="wrapper">
+        {% if site.author %}
+        {% include author-profile.html %}
+        {% endif %}
+
+        {% if site.footer.links %}
+        <ul class="social-icons">
+            {% for link in site.footer.links %}
+            <li>
+                <a href="{{ link.url | default: '#' }}">
+                    <i class="{{ link.icon }}"></i>
+                    {{ link.label }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <p class="page__footer-copyright">
+            &copy; {{ site.footer.since }}–{{ site.time | date: "%Y" }} {{ site.name }}.
+        </p>
+    </div>
+</footer>
