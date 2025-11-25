@@ -76,9 +76,20 @@
 }
 
 .sidebar--gallery {
-    width: 500px;
-    /* adjust as needed */
+    width: 350px;
+    /* wider sidebar */
     max-width: 50%;
-    /* responsive */
     padding: 1rem;
+}
+
+.sidebar-thumb {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.sidebar h4 {
+    margin: 0.25rem 0 1rem 0;
+    font-size: $type-size-6;
+    text-align: center;
 }

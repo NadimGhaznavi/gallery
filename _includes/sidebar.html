@@ -1,13 +1,6 @@
-{% if page.sidebar %}
-<div class="sidebar sticky sidebar--gallery">
-    {% for s in page.sidebar %}
-    {% if s.thumbnail %}
-    <img src="{{ s.thumbnail | relative_url }}" alt="{% if s.alt %}{{ s.alt }}{% endif %}" class="sidebar-thumb"
-        data-full="{{ s.fullsize | relative_url }}">
-    {% endif %}
-    {% if s.title %}
-    <h3>{{ s.title }}</h3>
-    {% endif %}
-    {% endfor %}
-</div>
-{% endif %}
+{% for art in site.data.sidebar %}
+<a href="{{ art.url | relative_url }}">
+    <img src="{{ art.thumbnail | relative_url }}" alt="{{ art.title }}" class="sidebar-thumb">
+</a>
+<h4>{{ art.title }}</h4>
+{% endfor %}
