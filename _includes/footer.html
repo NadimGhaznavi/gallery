@@ -5,14 +5,15 @@
             {% if site.author.email %}
             <li>
                 <i class="fas fa-fw fa-envelope"></i>
-                <a href="mailto:{{ site.author.email }}">@gMail.com</a>
+                <a href="mailto:{{ site.author.email }}">Email</a>
             </li>
             {% endif %}
 
             {% if site.author.links %}
             {% for link in site.author.links %}
             <li>
-                <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.icon}}</a>
+                <i class="{{ link.icon }}"></i>
+                <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
             </li>
             {% endfor %}
             {% endif %}
