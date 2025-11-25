@@ -35,3 +35,31 @@
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
+
+/* Horizontal author/social/footer bar */
+.horizontal-footer-list {
+    list-style: none;
+    /* remove bullets */
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    /* horizontal layout */
+    gap: 1.25rem;
+    /* spacing between items */
+    align-items: center;
+    flex-wrap: wrap;
+    /* responsive wrap on small screens */
+}
+
+.horizontal-footer-list li {
+    display: flex;
+    align-items: center;
+}
+
+.horizontal-footer-list i {
+    margin-right: 0.35rem;
+    /* spacing between icon and text */
+    font-size: 1.05em;
+    /* slightly larger icon for clarity */
+}

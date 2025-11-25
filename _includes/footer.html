@@ -1,24 +1,40 @@
 <footer class="page__footer">
-    <div class="wrapper">
-        {% if site.author %}
-        {% include author-profile.html %}
-        {% endif %}
+    <div class="page__footer-inner">
 
-        {% if site.footer.links %}
-        <ul class="social-icons">
-            {% for link in site.footer.links %}
+        <ul class="horizontal-footer-list">
+            {% if site.author.location %}
             <li>
-                <a href="{{ link.url | default: '#' }}">
-                    <i class="{{ link.icon }}"></i>
-                    {{ link.label }}
-                </a>
+                <i class="fas fa-fw fa-map-marker-alt"></i>
+                {{ site.author.location }}
+            </li>
+            {% endif %}
+
+            {% if site.author.email %}
+            <li>
+                <i class="fas fa-fw fa-envelope"></i>
+                <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+            </li>
+            {% endif %}
+
+            {% if site.author.links %}
+            {% for link in site.author.links %}
+            <li>
+                <i class="{{ link.icon }}"></i>
+                <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
             </li>
             {% endfor %}
-        </ul>
-        {% endif %}
+            {% endif %}
 
-        <p class="page__footer-copyright">
-            &copy; {{ site.footer.since }}–{{ site.time | date: "%Y" }} {{ site.name }}.
-        </p>
+            <!-- Etsy link (in top nav too, but footer version is useful) -->
+            <li>
+                <i class="fas fa-fw fa-shopping-cart"></i>
+                <a href="https://osoyalce.etsy.com" target="_blank" rel="noopener">Etsy</a>
+            </li>
+        </ul>
+
+        <div class="footer-copyright">
+            &copy; {{ site.time | date: "%Y" }} {{ site.title }} — All Rights Reserved.
+        </div>
+
     </div>
 </footer>
