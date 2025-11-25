@@ -63,3 +63,14 @@
     /* font-size: 0.8em; */
     /* slightly larger icon for clarity */
 }
+
+.horizontal-footer-list li {
+    display: flex;
+    align-items: center;
+    font-family: $sans-serif-narrow;
+    /* match theme */
+    font-size: $type-size-6;
+    /* match theme sizing */
+    text-transform: uppercase;
+    /* optional, matches social links style */
+}
