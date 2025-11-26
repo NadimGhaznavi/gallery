@@ -1,34 +1,26 @@
-<footer class="page__footer">
+{% unless site.atom_feed.hide %}
+  {% assign show_atom = true %}
+{% endunless %}
+{% if site.footer.links or show_atom %}
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    {% if site.data.ui-text[site.locale].follow_label %}
+      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+    {% endif %}
 
-    <!-- Artwork thumbnail strip -->
-    <div class="footer-artwork-strip">
-        <div class="footer-artwork-scroll">
-            {% for art in site.data.artwork %}
-            <a href="{{ art.url | relative_url }}" class="footer-artwork-item">
-                <img src="{{ art.thumbnail | relative_url }}" alt="{{ art.title }}" class="footer-art-thumb">
-            </a>
-            {% endfor %}
-        </div>
-    </div>
+    {% if site.footer.links %}
+      {% for link in site.footer.links %}
+        {% if link.label and link.url %}
+          <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label | escape_once | strip }}</a></li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
 
-    <div class="page__footer-inner">
-        <ul class="horizontal-footer-list">
-            {% if site.author.email %}
-            <li>
-                <i class="fas fa-fw fa-envelope"></i>
-                <a href="mailto:{{ site.author.email }}">Email</a>
-            </li>
-            {% endif %}
+    {% unless site.atom_feed.hide %}
+      <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
+    {% endunless %}
+  </ul>
+</div>
+{% endif %}
 
-            {% if site.author.links %}
-            {% for link in site.author.links %}
-            <li>
-                <i class="{{ link.icon }}"></i>
-                <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
-            </li>
-            {% endfor %}
-            {% endif %}
-        </ul>
-    </div>
-
-</footer>
+<div class="page__footer-copyright">&copy; {% assign site_time = site.time | date: '%Y' %}{% if site.footer.since and site_time != site.footer.since %}{{ site.footer.since }} - {% endif %}{{ site_time }} <a href="{{ site.copyright_url | default: site.url }}">{{ site.copyright | default: site.title | escape_once | strip }}</a>. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
