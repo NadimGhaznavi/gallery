@@ -1,14 +1,18 @@
 <footer class="page__footer">
-    <ul class="horizontal-footer-list">
-        {% for art in site.data.artwork %}
-        <li>
-            <a href="{{ art.url | relative_url }}">
-                <img src="{{ art.thumbnail | relative_url }}" alt="{{ art.title }}" class="sidebar-thumb">
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-    <br>
+
+    <!-- Artwork thumbnail strip -->
+    <div class="page__footer-inner footer-artwork-strip">
+        <ul class="horizontal-footer-list footer-artwork-list">
+            {% for art in site.data.artwork %}
+            <li class="footer-artwork-item">
+                <a href="{{ art.url | relative_url }}">
+                    <img src="{{ art.thumbnail | relative_url }}" alt="{{ art.title }}" class="footer-art-thumb">
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
     <div class="page__footer-inner">
         <ul class="horizontal-footer-list">
             {% if site.author.email %}
@@ -26,9 +30,7 @@
             </li>
             {% endfor %}
             {% endif %}
-
         </ul>
-
     </div>
 
 </footer>

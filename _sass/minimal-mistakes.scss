@@ -36,41 +36,25 @@
 /* @import "minimal-mistakes/sidebar"; */
 @import "minimal-mistakes/print";
 
-/* Horizontal author/social/footer bar */
-.horizontal-footer-list {
-    list-style: none;
-    /* remove bullets */
-    padding: 0;
-    margin: 0;
+.footer-artwork-strip {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
 
+.footer-artwork-list {
     display: flex;
-    /* horizontal layout */
-    gap: 1.25rem;
-    /* spacing between items */
-    align-items: center;
     flex-wrap: wrap;
-    /* responsive wrap on small screens */
+    justify-content: center;
+    gap: 0.75rem;
 }
 
-.horizontal-footer-list li {
-    display: flex;
-    align-items: center;
+.footer-art-thumb {
+    width: 65px;
+    height: auto;
+    border-radius: 4px;
+    transition: opacity 0.2s ease;
 }
 
-.horizontal-footer-list i {
-    margin-right: 0.35rem;
-    /* spacing between icon and text */
-    /* font-size: 0.8em; */
-    /* slightly larger icon for clarity */
-}
-
-.horizontal-footer-list li {
-    display: flex;
-    align-items: center;
-    font-family: $sans-serif-narrow;
-    /* match theme */
-    font-size: $type-size-6;
-    /* match theme sizing */
-    text-transform: uppercase;
-    /* optional, matches social links style */
+.footer-art-thumb:hover {
+    opacity: 0.8;
 }
