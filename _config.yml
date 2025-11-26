@@ -1,0 +1,23 @@
+# Site settings
+title: "Gallery"
+description: "Bear and Moose Studio"
+baseurl: "/" # no subfolder
+url: "https://gallery.osoyalce.com"
+
+# Author info
+author:
+  name: "Nadim-Daniel Ghaznavi"
+  email: "nghaznavi@gmail.com"
+
+# Jekyll settings
+markdown: kramdown
+theme: null # we are not using any theme
+plugins: []
+
+# Collections
+collections:
+  artwork:
+    output: true
+
+# Build settings
+include: [".htaccess"]

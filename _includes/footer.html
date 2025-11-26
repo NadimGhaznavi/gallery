@@ -1,0 +1,17 @@
+<footer class="site-footer">
+    <!-- Horizontal scrolling artwork strip -->
+    <div class="footer-artwork-strip">
+        <div class="footer-artwork-scroll">
+            {% for art in site.data.artwork %}
+            <a href="{{ art.url | relative_url }}" class="footer-artwork-item">
+                <img src="{{ art.thumbnail | relative_url }}" alt="{{ art.title }}" class="footer-art-thumb">
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="footer-info">
+        <p>&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}</p>
+        <p>Email: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+    </div>
+</footer>

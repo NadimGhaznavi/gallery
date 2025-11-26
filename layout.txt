@@ -1,0 +1,21 @@
+gallery/
+├── _config.yml
+├── _data/
+│   └── artwork.yml
+├── _includes/
+│   ├── header.html
+│   └── footer.html
+├── _layouts/
+│   ├── default.html
+│   └── artwork.html
+├── assets/
+│   ├── css/
+│   │   └── main.scss
+│   └── images/
+│       └── art/  # all artwork & thumbnails
+├── index.md
+└── art/  # artwork pages
+    ├── yellow-dog-on-bridge.md
+    ├── divisions.md
+    └── ... (other artwork)
+
