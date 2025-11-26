@@ -74,22 +74,3 @@
     text-transform: uppercase;
     /* optional, matches social links style */
 }
-
-.sidebar--gallery {
-    width: 350px;
-    /* wider sidebar */
-    max-width: 50%;
-    padding: 1rem;
-}
-
-.sidebar-thumb {
-    width: 100%;
-    margin-bottom: 0.5rem;
-    cursor: pointer;
-}
-
-.sidebar h4 {
-    margin: 0.25rem 0 1rem 0;
-    font-size: $type-size-6;
-    text-align: center;
-}
