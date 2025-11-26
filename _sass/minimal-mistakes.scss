@@ -36,25 +36,51 @@
 /* @import "minimal-mistakes/sidebar"; */
 @import "minimal-mistakes/print";
 
+/* --- Horizontal scrolling artwork strip --- */
 .footer-artwork-strip {
     padding: 1rem 0;
     border-bottom: 1px solid #e5e5e5;
 }
 
-.footer-artwork-list {
+/* Scroll container */
+.footer-artwork-scroll {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
     gap: 0.75rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0.5rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /* smooth scrolling on iOS */
+    white-space: nowrap;
+}
+
+/* Hide scrollbar (optional but clean) */
+.footer-artwork-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.footer-artwork-scroll {
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Thumbnail styling */
+.footer-artwork-item {
+    flex: 0 0 auto;
+    /* Prevent shrinking */
+    display: inline-block;
 }
 
 .footer-art-thumb {
-    width: 65px;
+    width: 75px;
     height: auto;
     border-radius: 4px;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.15s ease;
 }
 
 .footer-art-thumb:hover {
-    opacity: 0.8;
+    opacity: 0.85;
+    transform: scale(1.03);
 }

@@ -2,15 +2,13 @@
 
     <!-- Artwork thumbnail strip -->
     <div class="page__footer-inner footer-artwork-strip">
-        <ul class="horizontal-footer-list footer-artwork-list">
+        <div class="footer-artwork-scroll">
             {% for art in site.data.artwork %}
-            <li class="footer-artwork-item">
-                <a href="{{ art.url | relative_url }}">
-                    <img src="{{ art.thumbnail | relative_url }}" alt="{{ art.title }}" class="footer-art-thumb">
-                </a>
-            </li>
+            <a href="{{ art.url | relative_url }}" class="footer-artwork-item">
+                <img src="{{ art.thumbnail | relative_url }}" alt="{{ art.title }}" class="footer-art-thumb">
+            </a>
             {% endfor %}
-        </ul>
+        </div>
     </div>
 
     <div class="page__footer-inner">
