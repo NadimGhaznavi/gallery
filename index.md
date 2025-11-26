@@ -1,6 +1,8 @@
 ---
-layout: home
-author_profile: true
+layout: default
+title: Bear & Moose Studio
 ---
+
+<h1>Hello World!</h1>
 
 
