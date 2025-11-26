@@ -1,7 +1,0 @@
-<div class="sidebar sticky sidebar--gallery">
-    {% for art in site.data.artwork %}
-    <a href="{{ art.url | relative_url }}">
-        <img src="{{ art.thumbnail | relative_url }}" alt="{{ art.title }}" class="sidebar-thumb">
-    </a>
-    {% endfor %}
-</div>
