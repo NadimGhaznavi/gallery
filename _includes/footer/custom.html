@@ -1,11 +1,3 @@
 <!-- start custom footer snippets -->
-<div class="sidebar sticky sidebar--gallery">
-    <ul class="horizontal-footer-list">
-        {% for art in site.data.artwork %}
-        <a href="{{ art.url | relative_url }}">
-            <img src="{{ art.thumbnail | relative_url }}" alt="{{ art.title }}" class="sidebar-thumb">
-        </a>
-        {% endfor %}
-    </ul>
-</div>
+
 <!-- end custom footer snippets -->
