@@ -35,27 +35,27 @@
 @import "minimal-mistakes/archive";
 /* @import "minimal-mistakes/sidebar"; */
 @import "minimal-mistakes/print";
-
-/* --- Horizontal scrolling artwork strip (isolated) --- */
+/* --- Artwork strip override — fully isolated --- */
 
 .page__footer .footer-artwork-strip {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     padding: 0.5rem 0;
+    width: 100%;
 }
 
-/* Flex scroll row — fully isolated */
+/* Flex scroll row */
 .page__footer .footer-artwork-strip .footer-artwork-scroll {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     gap: 0.75rem;
-    white-space: nowrap;
     align-items: center;
     scroll-behavior: smooth;
+    white-space: nowrap;
 }
 
-/* Hide scrollbars */
+/* Hide scrollbar */
 .page__footer .footer-artwork-strip .footer-artwork-scroll::-webkit-scrollbar {
     display: none;
 }
@@ -64,23 +64,41 @@
     scrollbar-width: none;
 }
 
-/* Child items — do not shrink */
+/* Thumbnail items */
 .page__footer .footer-artwork-strip .footer-artwork-item {
-    display: block;
     flex: 0 0 auto !important;
+    display: inline-block;
 }
 
-/* Thumbnail sizing */
+/* Proper thumbnail size */
 .page__footer .footer-artwork-strip .footer-art-thumb {
     width: 75px !important;
-    height: auto;
+    height: auto !important;
     border-radius: 4px;
-    transition: opacity 0.2s ease, transform 0.15s ease;
     flex-shrink: 0 !important;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-/* Hover effect */
 .page__footer .footer-artwork-strip .footer-art-thumb:hover {
     opacity: 0.85;
-    transform: scale(1.03);
+    transform: scale(1.05);
+}
+
+/* --- FIX: Restore horizontal footer links --- */
+
+/* MM forces vertical lists in footer — we override */
+.page__footer-inner .horizontal-footer-list {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1.25rem !important;
+}
+
+.page__footer-inner .horizontal-footer-list li {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
 }
