@@ -1,15 +1,13 @@
 <footer class="page__footer">
-    <div class="sidebar sticky sidebar--gallery">
-        <ul class="horizontal-footer-list">
-            {% for art in site.data.artwork %}
-            <li>
-                <a href="{{ art.url | relative_url }}">
-                    <img src="{{ art.thumbnail | relative_url }}" alt="{{ art.title }}" class="sidebar-thumb">
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
+    <ul class="horizontal-footer-list">
+        {% for art in site.data.artwork %}
+        <li>
+            <a href="{{ art.url | relative_url }}">
+                <img src="{{ art.thumbnail | relative_url }}" alt="{{ art.title }}" class="sidebar-thumb">
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
     <br>
     <div class="page__footer-inner">
         <ul class="horizontal-footer-list">
