@@ -10,18 +10,22 @@
   thumbnail: "/images/art/girl-next-door-thumb.png"
   url: "/art/girl-next-door"
   description: "The girl next door"
+  size: '36"x24"'
 - title: "Skyway"
   thumbnail: "/images/art/skyway-thumb.png"
   url: "/art/skyway"
   description: "Skyway"
+  size: '10"x8"'
 - title: "Spraypaint Scream"
   thumbnail: "/images/art/spraypaint-scream-thumb.png"
   url: "/art/spraypaint-scream"
   description: "Spraypaint Scream"
+  size: '10"x12"'
 - title: "The Hammer"
   thumbnail: "/images/art/the-hammer-thumb.png"
   url: "/art/the-hammer"
   description: "Hamilton, Ontario, Canada"
+  size: '16"x12"'
 - title: "Yaqoob"
   thumbnail: "/images/art/yaqoob-thumb.png"
   url: "/art/yaqoob"
