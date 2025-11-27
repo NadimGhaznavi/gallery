@@ -7,5 +7,5 @@ description: |
 original: 'Oil on cardboard'
 print: |
   Giclee, PigmentInk on Premium Fine Art Matte Canvas, 410g per square metre, 1.5" frame
-size: '36" x 24"
+size: '36" x 24"'
 ---
