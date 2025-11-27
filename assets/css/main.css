@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #1e184d;
+    background: #0e0b23;
     color: #d7e3c2;
 }
 
@@ -28,14 +28,14 @@ h3 {
 /* Header */
 .site-header {
     padding: 1rem;
-    background: #f5f5f5;
+    background: #0b081a;
     text-align: center;
 }
 
 /* Footer */
 .site-footer {
     padding: 1rem;
-    background: #f5f5f5;
+    background: #0b081a;
 }
 
 /* Artwork horizontal scroll strip */
@@ -78,7 +78,7 @@ h3 {
     max-width: 100%;
     height: auto;
     margin-bottom: 1rem;
-    background: #110d2b;
+    background: #0e0b23;
     color: #d7e3c2;
 
 }
