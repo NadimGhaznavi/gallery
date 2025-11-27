@@ -7,4 +7,6 @@ description: |
 
   My father was an accountant. At the height of his corporate career in the early 80's, he was financial controller of South East Asia for Burroughs. He was also a loving husband and father and a wonderful poet too!
 size: '20" x 20"'
+original: 'Oil on 3/4" wood'
+print: Giclee, PigmentInk on Premium Fine Art Matte Canvas, 410g per square metre, 1.5" frame
 ---
